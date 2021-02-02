@@ -68,6 +68,7 @@ public class Space extends Subject {
             if (oldPlayer != null) {
                 // this should actually not happen
                 oldPlayer.setSpace(null);
+
             }
             if (player != null) {
                 player.setSpace(this);
