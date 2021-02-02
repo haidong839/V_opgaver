@@ -55,11 +55,10 @@ public class GameController {
 
         Player currentPlayer = board.getCurrentPlayer();
         currentPlayer.setSpace(space);
+        board.setCount(board.getCount() + 1);
         int number = board.getPlayerNumber(currentPlayer);
         Player nextPlayer = board.getPlayer((number + 1) % board.getPlayersNumber());
         board.setCurrentPlayer(nextPlayer);
-
-        board.setCount(board.getCount() + 1);
 
     }
 

@@ -214,7 +214,7 @@ public class Board extends Subject {
         return "Player = " + getCurrentPlayer().getName() + " Move Counter: " + getCount();
     }
 
-    private int count;
+    private int count = 0;
 
     public int getCount() {
         return count;
