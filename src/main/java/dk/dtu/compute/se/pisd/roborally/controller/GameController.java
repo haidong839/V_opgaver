@@ -54,12 +54,14 @@ public class GameController {
         //     if the player is moved
 
         Player currentPlayer = board.getCurrentPlayer();
-        currentPlayer.setSpace(space);
-        int number = board.getPlayerNumber(currentPlayer);
-        Player nextPlayer = board.getPlayer((number + 1) % board.getPlayersNumber());
-        board.setCurrentPlayer(nextPlayer);
 
-        board.setCount(board.getCount() + 1);
+                currentPlayer.setSpace(space);
+
+                board.setCount(board.getCount() + 1);
+
+                int number = board.getPlayerNumber(currentPlayer);
+                Player nextPlayer = board.getPlayer((number + 1) % board.getPlayersNumber());
+                board.setCurrentPlayer(nextPlayer);
 
     }
 

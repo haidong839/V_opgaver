@@ -38,11 +38,22 @@ public class Space extends Subject {
 
     private Player player;
 
+    private boolean occupation;
+
     public Space(Board board, int x, int y) {
         this.board = board;
         this.x = x;
         this.y = y;
         player = null;
+        occupation = false;
+    }
+
+    public boolean getState(){
+        return this.occupation;
+    }
+
+    public void setState(boolean state){
+        this.occupation = state;
     }
 
     public Player getPlayer() {
