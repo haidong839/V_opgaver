@@ -59,6 +59,8 @@ public class GameController {
         Player nextPlayer = board.getPlayer((number + 1) % board.getPlayersNumber());
         board.setCurrentPlayer(nextPlayer);
 
+        board.setCount(board.getCount() + 1);
+
     }
 
     /**
@@ -68,7 +70,7 @@ public class GameController {
     public void notImplememted() {
         // XXX just for now to indicate that the actual method to be used by a handler
         //     is not yet implemented
-    };
+    }
 
     public boolean moveCards(@NotNull CommandCardField source, @NotNull CommandCardField target) {
         CommandCard sourceCard = source.getCard();
