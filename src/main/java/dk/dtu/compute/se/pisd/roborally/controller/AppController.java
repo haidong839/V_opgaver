@@ -32,7 +32,6 @@ import dk.dtu.compute.se.pisd.roborally.model.Player;
 
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceDialog;
 import org.jetbrains.annotations.NotNull;
@@ -126,7 +125,7 @@ public class AppController implements Observer {
 
     public void exit() {
         if (gameController != null) {
-            Alert alert = new Alert(AlertType.CONFIRMATION);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Exit RoboRally?");
             alert.setContentText("Are you sure you want to exit RoboRally?");
             Optional<ButtonType> result = alert.showAndWait();
