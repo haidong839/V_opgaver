@@ -52,6 +52,7 @@ public class RoboRally extends Application {
         super.init();
     }
 
+
     @Override
     public void start(Stage primaryStage) {
         stage = primaryStage;

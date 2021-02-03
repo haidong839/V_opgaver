@@ -45,21 +45,20 @@ public class Space extends Subject {
         this.x = x;
         this.y = y;
         player = null;
-        occupation = false;
     }
 
-    public boolean getState(){
-        return this.occupation;
-    }
-
-    public void setState(boolean state){
-        this.occupation = state;
-    }
-
+    /**
+     * getter som returnerer spilleren på dette space
+     * @return
+     */
     public Player getPlayer() {
         return player;
     }
 
+    /**
+     * placerer spiller på space (felt)
+     * @param player
+     */
     public void setPlayer(Player player) {
         Player oldPlayer = this.player;
         if (player != oldPlayer &&
@@ -77,10 +76,12 @@ public class Space extends Subject {
         }
     }
 
+    /**
+     *This is a minor hack; since some views that are registered with the space
+     *also need to update when some player attributes change, the player can
+     *notify the space of these changes by calling this method.
+     */
     void playerChanged() {
-        // This is a minor hack; since some views that are registered with the space
-        // also need to update when some player attributes change, the player can
-        // notify the space of these changes by calling this method.
         notifyChange();
     }
 

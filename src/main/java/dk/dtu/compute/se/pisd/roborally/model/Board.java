@@ -57,6 +57,8 @@ public class Board extends Subject {
 
     private boolean stepMode;
 
+    private int count;
+
     public Board(int width, int height, @NotNull String boardName) {
         this.boardName = boardName;
         this.width = width;
@@ -89,6 +91,12 @@ public class Board extends Subject {
         }
     }
 
+    /**
+     * returnerer feltet med et givent koordinatsæt
+     * @param x
+     * @param y
+     * @return
+     */
     public Space getSpace(int x, int y) {
         if (x >= 0 && x < width &&
                 y >= 0 && y < height) {
@@ -98,10 +106,18 @@ public class Board extends Subject {
         }
     }
 
+    /**
+     * returnerer antallet af spillere i det givne spil
+     * @return
+     */
     public int getPlayersNumber() {
         return players.size();
     }
 
+    /**
+     * tilføjer en spiller til spillet
+     * @param player
+     */
     public void addPlayer(@NotNull Player player) {
         if (player.board == this && !players.contains(player)) {
             players.add(player);
@@ -109,6 +125,11 @@ public class Board extends Subject {
         }
     }
 
+    /**
+     * returnerer en given spiller ud fra arrayplads
+     * @param i
+     * @return
+     */
     public Player getPlayer(int i) {
         if (i >= 0 && i < players.size()) {
             return players.get(i);
@@ -117,10 +138,18 @@ public class Board extends Subject {
         }
     }
 
+    /**
+     * returnerer den spiller, hvis tur det er
+     * @return
+     */
     public Player getCurrentPlayer() {
         return current;
     }
 
+    /**
+     * giver turen til et givet spillerobjekt
+     * @param player
+     */
     public void setCurrentPlayer(Player player) {
         if (player != this.current && players.contains(player)) {
             this.current = player;
@@ -161,6 +190,10 @@ public class Board extends Subject {
         }
     }
 
+    /**
+     * @param player
+     * @return the given player's number
+     */
     public int getPlayerNumber(@NotNull Player player) {
         if (player.board == this) {
             return players.indexOf(player);
@@ -200,6 +233,9 @@ public class Board extends Subject {
         return getSpace(x, y);
     }
 
+    /**
+     * @return statusMessage with the name of current player and collective moves in the game
+     */
     public String getStatusMessage() {
         // This is actually a view aspect, but for making the first task easy for
         // the students, this method gives a string representation of the current
@@ -214,8 +250,13 @@ public class Board extends Subject {
         return "Player = " + getCurrentPlayer().getName() + " Move Counter: " + getCount();
     }
 
-    private int count;
+    // TODO Assignment V1: add a counter along with a getter and a setter, so the
+    //      state the board (game) contains the number of moves, which then can
+    //      be used to extend the status message including the number of
 
+    /**
+     * @return total move count in game
+     */
     public int getCount() {
         return count;
     }
@@ -225,9 +266,5 @@ public class Board extends Subject {
             this.count = count;
         }
     }
-
-    // TODO Assignment V1: add a counter along with a getter and a setter, so the
-    //      state the board (game) contains the number of moves, which then can
-    //      be used to extend the status message including the number of
 
 }
