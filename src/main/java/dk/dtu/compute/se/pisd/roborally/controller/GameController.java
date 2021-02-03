@@ -52,6 +52,7 @@ public class GameController {
         //     following the current player
         //   - the counter of moves in the game should be increased by one
         //     if the player is moved
+
         /**
          * Den aktuelle spiller kaldes til brættet.
          * Antallet af felter, man har rykket frem registreres
@@ -77,7 +78,7 @@ public class GameController {
      */
     public void notImplememted() {
         // XXX just for now to indicate that the actual method to be used by a handler
-        //     is nott yet implemented
+        //     is not yet implemented
     }
     /**
      * Denne funktion
@@ -96,5 +97,5 @@ public class GameController {
             return false;
         }
     }
-
+        //TEST GIT PUSH
 }
