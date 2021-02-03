@@ -49,7 +49,7 @@ public class Space extends Subject {
 
     /**
      * getter som returnerer spilleren på dette space
-     * @return
+     * @returns space state: has or hasn't a player
      */
     public Player getPlayer() {
         return player;
@@ -57,7 +57,7 @@ public class Space extends Subject {
 
     /**
      * placerer spiller på space (felt)
-     * @param player
+     * @param player which needs to be placed on the space
      */
     public void setPlayer(Player player) {
         Player oldPlayer = this.player;

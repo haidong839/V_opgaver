@@ -67,8 +67,7 @@ public class Player extends Subject {
     }
 
     /**
-     * getter som neturnerer spillernavn
-     * @return
+     * @return player name
      */
     public String getName() {
         return name;
@@ -77,7 +76,7 @@ public class Player extends Subject {
     //TODO: spørg ind til navnesammenligning
     /**
      * sammenligner om det nye navn er ens med spillerens tidligere navn
-     * @param name
+     * @param name of specific player
      */
     public void setName(String name) {
         if (name != null && !name.equals(this.name)) {
@@ -90,8 +89,7 @@ public class Player extends Subject {
     }
 
     /**
-     * returnerer spillerens brik-farve
-     * @return
+     * @return color of player
      */
     public String getColor() {
         return color;
@@ -99,7 +97,7 @@ public class Player extends Subject {
 
     /**
      * setter spillerens brik til en farve
-     * @param color
+     * @param color of specific player
      */
     public void setColor(String color) {
         this.color = color;
@@ -110,8 +108,7 @@ public class Player extends Subject {
     }
 
     /**
-     * returnerer det felt, spilleren står på
-     * @return
+     * @return position / space
      */
     public Space getSpace() {
         return space;
