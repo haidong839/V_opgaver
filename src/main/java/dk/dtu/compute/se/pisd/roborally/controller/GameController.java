@@ -78,7 +78,7 @@ public class GameController {
      */
     public void notImplememted() {
         // XXX just for now to indicate that the actual method to be used by a handler
-        //     is not yet implemented
+        //     is nott yet implemented
     }
 
     /**
