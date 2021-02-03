@@ -52,6 +52,11 @@ public class GameController {
         //     following the current player
         //   - the counter of moves in the game should be increased by one
         //     if the player is moved
+        /**
+         * Den aktuelle spiller kaldes til brættet.
+         * Antallet af felter, man har rykket frem registreres
+         * Kalder og videregiver oplysninger til spillerens nummer og derefter næste spillers tur
+         */
 
         Player currentPlayer = board.getCurrentPlayer();
 
@@ -74,7 +79,12 @@ public class GameController {
         // XXX just for now to indicate that the actual method to be used by a handler
         //     is not yet implemented
     }
-
+    /**
+     * Denne funktion
+     * @param source
+     * @param target
+     * @return
+     */
     public boolean moveCards(@NotNull CommandCardField source, @NotNull CommandCardField target) {
         CommandCard sourceCard = source.getCard();
         CommandCard targetCard = target.getCard();
