@@ -59,9 +59,8 @@ public class GameController {
          * Kalder og videregiver oplysninger til spillerens nummer og derefter næste spillers tur
          */
 
-        Player currentPlayer = board.getCurrentPlayer();
-
         if (space.getPlayer() == null){
+            Player currentPlayer = board.getCurrentPlayer();
             currentPlayer.setSpace(space);
 
             board.setCount(board.getCount() + 1);

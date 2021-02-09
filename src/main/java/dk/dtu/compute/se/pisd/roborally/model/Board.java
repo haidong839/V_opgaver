@@ -264,6 +264,7 @@ public class Board extends Subject {
     public void setCount(int count){
         if (this.count != count){
             this.count = count;
+            notifyChange();
         }
     }
 
